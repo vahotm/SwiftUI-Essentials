@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_EssentialsApp: App {
     var body: some Scene {
         WindowGroup {
-            OrderForm()
+            ContentView()
         }
     }
 }

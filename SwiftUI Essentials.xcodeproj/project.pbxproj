@@ -12,7 +12,9 @@
 		201EF61A252BB3CD00DA1207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201EF619252BB3CD00DA1207 /* Assets.xcassets */; };
 		201EF61D252BB3CD00DA1207 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201EF61C252BB3CD00DA1207 /* Preview Assets.xcassets */; };
 		201EF625252BB52A00DA1207 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EF624252BB52A00DA1207 /* Order.swift */; };
-		205CFC25252BC14400412DC4 /* OrderHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC24252BC14400412DC4 /* OrderHistory.swift */; };
+		205CFC25252BC14400412DC4 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC24252BC14400412DC4 /* OrderHistoryView.swift */; };
+		205CFC29252D111000412DC4 /* NewOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC28252D111000412DC4 /* NewOrderView.swift */; };
+		205CFC2E252D127700412DC4 /* SubmittedOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC2D252D127700412DC4 /* SubmittedOrders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,9 @@
 		201EF61C252BB3CD00DA1207 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		201EF61E252BB3CD00DA1207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201EF624252BB52A00DA1207 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		205CFC24252BC14400412DC4 /* OrderHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistory.swift; sourceTree = "<group>"; };
+		205CFC24252BC14400412DC4 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
+		205CFC28252D111000412DC4 /* NewOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderView.swift; sourceTree = "<group>"; };
+		205CFC2D252D127700412DC4 /* SubmittedOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedOrders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				201EF615252BB3CC00DA1207 /* SwiftUI_EssentialsApp.swift */,
 				201EF617252BB3CC00DA1207 /* ContentView.swift */,
-				205CFC24252BC14400412DC4 /* OrderHistory.swift */,
+				205CFC28252D111000412DC4 /* NewOrderView.swift */,
+				205CFC24252BC14400412DC4 /* OrderHistoryView.swift */,
 				201EF624252BB52A00DA1207 /* Order.swift */,
+				205CFC2D252D127700412DC4 /* SubmittedOrders.swift */,
 				201EF619252BB3CD00DA1207 /* Assets.xcassets */,
 				201EF61E252BB3CD00DA1207 /* Info.plist */,
 				201EF61B252BB3CD00DA1207 /* Preview Content */,
@@ -146,8 +152,10 @@
 			files = (
 				201EF625252BB52A00DA1207 /* Order.swift in Sources */,
 				201EF618252BB3CC00DA1207 /* ContentView.swift in Sources */,
+				205CFC2E252D127700412DC4 /* SubmittedOrders.swift in Sources */,
 				201EF616252BB3CC00DA1207 /* SwiftUI_EssentialsApp.swift in Sources */,
-				205CFC25252BC14400412DC4 /* OrderHistory.swift in Sources */,
+				205CFC25252BC14400412DC4 /* OrderHistoryView.swift in Sources */,
+				205CFC29252D111000412DC4 /* NewOrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

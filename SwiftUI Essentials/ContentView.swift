@@ -7,37 +7,29 @@
 
 import SwiftUI
 
-struct OrderForm: View {
-    @State private var order = Order.empty
+struct ContentView: View {
 
     var body: some View {
-        VStack {
-            Text("Avocado Toast").font(.title)
-
-            Toggle(isOn: $order.includeSalt, label: {
-                Text("Include salt")
-            })
-            Toggle(isOn: $order.includeRedPepperFlakes, label: {
-                Text("Include red pepper flakes")
-            })
-            Stepper(value: $order.quantity, in: 1...10, label: {
-                Text("Quantity: \(order.quantity)")
-            })
-
-            Button(action: submitOrder, label: {
-                Text("Order")
-            })
+        TabView {
+            let dataSource = OrderDataSource(orders: testData)
+            NewOrderView(dataSource: dataSource)
+                .tabItem {
+                    Image(systemName: "square.and.pencil")
+                    Text("New order")
+                }
+            OrderHistory(dataSource: dataSource)
+                .tabItem {
+                    Image(systemName: "tray.full")
+                    Text("History")
+                }
         }
+        
     }
 
-    func submitOrder() {
-//        withAnimation {
-//        }
-    }
 }
 
-struct OrderForm_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderForm()
+        ContentView()
     }
 }
