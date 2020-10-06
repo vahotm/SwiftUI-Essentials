@@ -8,13 +8,45 @@
 import Foundation
 
 struct Order {
-    var title: String
-    var includeSalt: Bool
-    var includeRedPepperFlakes: Bool
-    var quantity: Int
+    enum Bread: String, CaseIterable, Identifiable {
+        var id: String { rawValue }
+
+        case wheat = "Wheat"
+        case rye = "Rye"
+        case sourdough = "Sourdough"
+    }
+
+    enum Spread: String, CaseIterable, Identifiable {
+        var id: String { rawValue }
+
+        case none = "None"
+        case peanutButter = "Peanut butter"
+        case honey = "Honey"
+    }
+
+    let title =  "Avocado toast"
+    var bread: Bread = .wheat
+    var spread: Spread = .none
+    var includeSalt = false
+    var includeRedPepperFlakes = false
+    var quantity: Int = 1
+
+    var summary: String {
+        var summary = "Toast"
+        if includeSalt {
+            summary = "Salty ".appending(summary.lowercased())
+        }
+        if includeRedPepperFlakes {
+            summary = summary.appending(" with pepper")
+        }
+        if quantity > 1 {
+            summary = "\(quantity) x ".appending(summary)
+        }
+        return summary
+    }
 
     static var empty: Self {
-        Order(title: "Avocado toast",includeSalt: false, includeRedPepperFlakes: false, quantity: 1)
+        Order()
     }
 }
 
@@ -31,17 +63,7 @@ struct CompletedOrder: Identifiable {
     }
 
     init(order: Order) {
-        var summary = order.title
-        if order.includeSalt {
-            summary = "Salty ".appending(summary)
-        }
-        if order.includeRedPepperFlakes {
-            summary = summary.appending(" with pepper flakes")
-        }
-        if order.quantity > 1 {
-            summary = "\(order.quantity) x ".appending(summary)
-        }
-        self.init(summary: summary, purchaseDate: Date(), order: order)
+        self.init(summary: order.summary, purchaseDate: Date(), order: order)
     }
 }
 
