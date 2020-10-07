@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Order {
     enum Bread: String, CaseIterable, Identifiable {
@@ -30,6 +31,9 @@ struct Order {
     var includeSalt = false
     var includeRedPepperFlakes = false
     var quantity: Int = 1
+
+    var includeEgg = false
+    var eggLocation = UnitPoint()
 
     var summary: String {
         var summary = "Toast"

@@ -12,20 +12,25 @@ struct ContentView: View {
     var body: some View {
         TabView {
             let dataSource = OrderDataSource(orders: testData)
-            NewOrderView(dataSource: dataSource)
-                .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("New order")
-                }
-            OrderHistory(dataSource: dataSource)
-                .tabItem {
-                    Image(systemName: "tray.full")
-                    Text("History")
-                }
-        }
-        
-    }
+            NavigationView {
+                NewOrderView(dataSource: dataSource)
+            }
+            .tabItem {
+                Image(systemName: "square.and.pencil")
+                Text("New order")
+            }
 
+            NavigationView {
+                OrderHistory(dataSource: dataSource)
+                OrderDetailPlaceholder()
+            }
+            .tabItem {
+                Image(systemName: "tray.full")
+                Text("History")
+            }
+        }
+        .accentColor(.green)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

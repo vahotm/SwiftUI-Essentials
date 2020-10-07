@@ -15,6 +15,8 @@
 		205CFC25252BC14400412DC4 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC24252BC14400412DC4 /* OrderHistoryView.swift */; };
 		205CFC29252D111000412DC4 /* NewOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC28252D111000412DC4 /* NewOrderView.swift */; };
 		205CFC2E252D127700412DC4 /* SubmittedOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CFC2D252D127700412DC4 /* SubmittedOrders.swift */; };
+		20FA483C252D964B00B79CE6 /* EggLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA483B252D964B00B79CE6 /* EggLocationPicker.swift */; };
+		20FA483F252D990300B79CE6 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA483E252D990300B79CE6 /* OrderDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		205CFC24252BC14400412DC4 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
 		205CFC28252D111000412DC4 /* NewOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderView.swift; sourceTree = "<group>"; };
 		205CFC2D252D127700412DC4 /* SubmittedOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedOrders.swift; sourceTree = "<group>"; };
+		20FA483B252D964B00B79CE6 /* EggLocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggLocationPicker.swift; sourceTree = "<group>"; };
+		20FA483E252D990300B79CE6 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				201EF617252BB3CC00DA1207 /* ContentView.swift */,
 				205CFC28252D111000412DC4 /* NewOrderView.swift */,
 				205CFC24252BC14400412DC4 /* OrderHistoryView.swift */,
+				20FA483B252D964B00B79CE6 /* EggLocationPicker.swift */,
+				20FA483E252D990300B79CE6 /* OrderDetailView.swift */,
 				201EF624252BB52A00DA1207 /* Order.swift */,
 				205CFC2D252D127700412DC4 /* SubmittedOrders.swift */,
 				201EF619252BB3CD00DA1207 /* Assets.xcassets */,
@@ -150,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FA483C252D964B00B79CE6 /* EggLocationPicker.swift in Sources */,
 				201EF625252BB52A00DA1207 /* Order.swift in Sources */,
+				20FA483F252D990300B79CE6 /* OrderDetailView.swift in Sources */,
 				201EF618252BB3CC00DA1207 /* ContentView.swift in Sources */,
 				205CFC2E252D127700412DC4 /* SubmittedOrders.swift in Sources */,
 				201EF616252BB3CC00DA1207 /* SwiftUI_EssentialsApp.swift in Sources */,

@@ -13,7 +13,7 @@ struct NewOrderView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Avocado Toast").font(.title)) {
+            Section(/*header: Text("Avocado Toast").font(.title)*/) {
                 Picker(selection: $order.bread, label: Text("Bread:")) {
                     ForEach(Order.Bread.allCases) { bread in
                         Text(bread.rawValue).tag(bread)
@@ -27,12 +27,23 @@ struct NewOrderView: View {
             }
 
             Section {
-                Toggle(isOn: $order.includeSalt, label: {
+                Toggle(isOn: $order.includeSalt) {
                     Text("Include salt")
-                })
-                Toggle(isOn: $order.includeRedPepperFlakes, label: {
+                }
+                Toggle(isOn: $order.includeRedPepperFlakes) {
                     Text("Include red pepper flakes")
-                })
+                }
+                Toggle(isOn: $order.includeEgg.animation()) {
+                    Text("Include egg")
+                }
+                if order.includeEgg {
+                    NavigationLink(destination: EggLocationPicker(location: $order.eggLocation)) {
+                        Text("Egg location")
+                    }
+                }
+            }
+
+            Section {
                 Stepper(value: $order.quantity, in: 0...10, label: {
                     Text("Quantity: \(order.quantity)")
                 })
@@ -45,7 +56,7 @@ struct NewOrderView: View {
                 .disabled(order.quantity == 0)
             }
         }
-        .accentColor(.green)
+        .navigationBarTitle(Text("Avocado Toast"))
     }
 
     func submitOrder() {
